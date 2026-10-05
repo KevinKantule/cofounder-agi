@@ -1,0 +1,19 @@
+# Entornos virtuales y Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Variables de entorno y llaves secretas (CRÍTICO)
+.env
+*.env
+
+# Archivos temporales de ejecución del cli_runner
+*_temp_exec.py
+temp_*.py
+
+# Bases de datos locales y logs
+*.db
+*.sqlite3
+logs/
+.chroma/

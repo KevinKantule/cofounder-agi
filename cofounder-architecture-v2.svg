@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1040" viewBox="0 0 1600 1040" role="img" aria-labelledby="title desc">
+  <title id="title">Flujo del prototipo Cofundador AGI</title>
+  <desc id="desc">Diagrama del flujo de idea, validación, decisión humana, ingeniería asistida por agentes y entrega de un MVP en Python.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f9fc; }
+      .title { font: 700 40px Arial, sans-serif; fill: #12263f; }
+      .subtitle { font: 400 19px Arial, sans-serif; fill: #52677d; }
+      .group { fill: #ffffff; stroke: #d8e1eb; stroke-width: 2; }
+      .groupTitle { font: 700 20px Arial, sans-serif; fill: #52677d; letter-spacing: 1px; }
+      .node { stroke-width: 2; }
+      .nodeTitle { font: 700 22px Arial, sans-serif; fill: #12263f; text-anchor: middle; }
+      .nodeText { font: 400 16px Arial, sans-serif; fill: #40566e; text-anchor: middle; }
+      .small { font: 400 14px Arial, sans-serif; fill: #52677d; text-anchor: middle; }
+      .note { font: 400 15px Arial, sans-serif; fill: #40566e; }
+      .arrow { fill: none; stroke: #60758d; stroke-width: 3; marker-end: url(#arrow); }
+      .arrowAccent { fill: none; stroke: #4d76d0; stroke-width: 3; marker-end: url(#arrowAccent); }
+      .arrowGreen { fill: none; stroke: #14826e; stroke-width: 3; marker-end: url(#arrowGreen); }
+      .label { font: 600 14px Arial, sans-serif; fill: #52677d; text-anchor: middle; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#60758d"/></marker>
+    <marker id="arrowAccent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4d76d0"/></marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#14826e"/></marker>
+  </defs>
+
+  <rect class="bg" width="1600" height="1040"/>
+  <text class="title" x="800" y="65" text-anchor="middle">Cofundador AGI · flujo actual del prototipo</text>
+  <text class="subtitle" x="800" y="98" text-anchor="middle">De una idea de negocio a un módulo MVP en Python</text>
+
+  <!-- Stage containers -->
+  <rect class="group" x="60" y="145" width="1480" height="210" rx="22"/>
+  <text class="groupTitle" x="90" y="180">1 · VALIDAR LA IDEA</text>
+  <rect class="group" x="60" y="400" width="1480" height="235" rx="22"/>
+  <text class="groupTitle" x="90" y="435">2 · DECISIÓN HUMANA E INGENIERÍA</text>
+  <rect class="group" x="60" y="680" width="1480" height="265" rx="22"/>
+  <text class="groupTitle" x="90" y="715">3 · SOPORTE DEL SISTEMA</text>
+
+  <!-- Validation nodes -->
+  <rect class="node" x="105" y="215" width="235" height="95" rx="16" fill="#e8f0ff" stroke="#94b4ed"/>
+  <text class="nodeTitle" x="222" y="252">Idea o requisito</text>
+  <text class="nodeText" x="222" y="280">Introducido en Streamlit</text>
+
+  <rect class="node" x="435" y="215" width="290" height="95" rx="16" fill="#f1ecff" stroke="#b8a5ed"/>
+  <text class="nodeTitle" x="580" y="248">Búsqueda de contexto</text>
+  <text class="nodeText" x="580" y="276">Web + repositorios GitHub</text>
+
+  <rect class="node" x="820" y="195" width="290" height="135" rx="16" fill="#fff4df" stroke="#edc675"/>
+  <text class="nodeTitle" x="965" y="232">Análisis de negocio</text>
+  <text class="nodeText" x="965" y="260">Abogado del diablo</text>
+  <text class="nodeText" x="965" y="284">+ explorador open-source</text>
+
+  <rect class="node" x="1205" y="215" width="290" height="95" rx="16" fill="#e5f7ee" stroke="#84c5a8"/>
+  <text class="nodeTitle" x="1350" y="248">Informe de viabilidad</text>
+  <text class="nodeText" x="1350" y="276">Riesgos, pivotes y stack</text>
+
+  <path class="arrowAccent" d="M340 262 H435"/>
+  <path class="arrowAccent" d="M725 262 H820"/>
+  <path class="arrowAccent" d="M1110 262 H1205"/>
+
+  <!-- Engineering nodes -->
+  <rect class="node" x="105" y="475" width="260" height="110" rx="16" fill="#fff1f1" stroke="#eaa3a3"/>
+  <text class="nodeTitle" x="235" y="512">Decisión humana</text>
+  <text class="nodeText" x="235" y="540">Aprobar, descartar</text>
+  <text class="nodeText" x="235" y="563">o replantear la idea</text>
+
+  <rect class="node" x="475" y="475" width="300" height="110" rx="16" fill="#e8f0ff" stroke="#94b4ed"/>
+  <text class="nodeTitle" x="625" y="512">Equipo técnico</text>
+  <text class="nodeText" x="625" y="540">Coder genera · Reviewer audita</text>
+  <text class="nodeText" x="625" y="563">Ciclo de corrección</text>
+
+  <rect class="node" x="885" y="475" width="265" height="110" rx="16" fill="#f1ecff" stroke="#b8a5ed"/>
+  <text class="nodeTitle" x="1017" y="512">Prueba local</text>
+  <text class="nodeText" x="1017" y="540">Ejecuta código temporal</text>
+  <text class="nodeText" x="1017" y="563">y devuelve errores</text>
+
+  <rect class="node" x="1260" y="475" width="235" height="110" rx="16" fill="#e5f7ee" stroke="#84c5a8"/>
+  <text class="nodeTitle" x="1377" y="512">MVP entregado</text>
+  <text class="nodeText" x="1377" y="540">mvp_core_module.py</text>
+  <text class="nodeText" x="1377" y="563">+ memoria del hito</text>
+
+  <path class="arrow" d="M235 310 V475"/>
+  <text class="label" x="300" y="390">con aprobación</text>
+  <path class="arrowAccent" d="M365 530 H475"/>
+  <path class="arrowAccent" d="M775 530 H885"/>
+  <path class="arrowGreen" d="M1150 530 H1260"/>
+  <path class="arrow" d="M1017 585 C1017 620,625 625,625 585"/>
+  <text class="label" x="820" y="625">si falla, corrige y vuelve a revisar</text>
+
+  <!-- Support nodes -->
+  <rect class="node" x="105" y="770" width="315" height="115" rx="16" fill="#edf8fb" stroke="#8ac3d5"/>
+  <text class="nodeTitle" x="262" y="807">Cerebro multicloud</text>
+  <text class="nodeText" x="262" y="835">Gemini · OpenRouter · Groq</text>
+  <text class="nodeText" x="262" y="858">Fallback: Ollama local</text>
+
+  <rect class="node" x="535" y="770" width="300" height="115" rx="16" fill="#f6f4e8" stroke="#d5c671"/>
+  <text class="nodeTitle" x="685" y="807">Memoria local</text>
+  <text class="nodeText" x="685" y="835">agent_memory.json</text>
+  <text class="nodeText" x="685" y="858">Contexto de hitos previos</text>
+
+  <rect class="node" x="950" y="770" width="300" height="115" rx="16" fill="#fff1f1" stroke="#eaa3a3"/>
+  <text class="nodeTitle" x="1100" y="807">Validaciones actuales</text>
+  <text class="nodeText" x="1100" y="835">Sintaxis AST y rutas</text>
+  <text class="nodeText" x="1100" y="858">dentro del proyecto</text>
+
+  <rect class="node" x="1365" y="770" width="130" height="115" rx="16" fill="#eef1f5" stroke="#bfc9d4"/>
+  <text class="nodeTitle" x="1430" y="808">UI</text>
+  <text class="small" x="1430" y="837">Dashboard</text>
+  <text class="small" x="1430" y="858">y consola</text>
+
+  <path class="arrow" d="M420 827 H535"/>
+  <path class="arrow" d="M835 827 H950"/>
+  <path class="arrow" d="M1250 827 H1365"/>
+  <path class="arrow" d="M1430 770 V585"/>
+  <path class="arrow" d="M685 770 V690 H625 V585"/>
+  <path class="arrow" d="M262 770 V690 H965 V330"/>
+
+  <!-- Footer -->
+  <rect x="60" y="970" width="1480" height="2" fill="#d8e1eb"/>
+  <text class="note" x="60" y="1005">Alcance actual: prototipo de investigación, validación y generación asistida. La ejecución generada ocurre localmente; aún requiere endurecimiento de seguridad para producción.</text>
+</svg>
