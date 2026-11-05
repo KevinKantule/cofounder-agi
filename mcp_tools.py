@@ -9,7 +9,7 @@ def safe_write_file(filepath: str, content: str) -> str:
     abs_path = os.path.abspath(os.path.join(WORKSPACE_DIR, filepath))
     
     # Bloqueo de Directory Traversal (ej. ../../windows/system32)
-    if not abs_path.startswith(WORKSPACE_DIR):
+    if os.path.commonpath([WORKSPACE_DIR, abs_path]) != WORKSPACE_DIR:
         return "⛔ ACCESO DENEGADO: Intento de modificación fuera del espacio de trabajo."
 
     # Si es Python, pasa primero por el guardarraíl AST
@@ -26,7 +26,7 @@ def safe_write_file(filepath: str, content: str) -> str:
 def safe_read_file(filepath: str) -> str:
     """Lee el contenido de un archivo dentro del proyecto."""
     abs_path = os.path.abspath(os.path.join(WORKSPACE_DIR, filepath))
-    if not abs_path.startswith(WORKSPACE_DIR):
+    if os.path.commonpath([WORKSPACE_DIR, abs_path]) != WORKSPACE_DIR:
         return "⛔ ACCESO DENEGADO: Lectura fuera del espacio de trabajo no permitida."
     if not os.path.exists(abs_path):
         return f"❌ El archivo '{filepath}' no existe."
